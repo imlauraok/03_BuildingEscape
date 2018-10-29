@@ -36,7 +36,8 @@ void UOpenDoor::CloseDoor()
 void UOpenDoor::OpenDoor()
 {
 	// Set the door rotation
-	Owner->SetActorRotation(FRotator(0.f, 0.f, 0.f));
+	// Owner->SetActorRotation(FRotator(0.f, 0.f, 0.f));
+	OnOpenRequest.Broadcast();
 }
 
 // Called every frame
